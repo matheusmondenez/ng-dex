@@ -12,6 +12,7 @@ import { PokemonService } from '../pokemon.service'
 
 export class CardComponent {
   pokemonService = inject(PokemonService)
+  id: string = ''
   photo: string = ''
 
   @Input({required: true}) url: string = '';
@@ -20,6 +21,7 @@ export class CardComponent {
   ngOnInit() {
     this.pokemonService.getData(this.url).subscribe({
       next: (data: any) => {
+        this.id = data.id
         this.photo = data.sprites.other['official-artwork'].front_default
       },
       error: (err) => {
