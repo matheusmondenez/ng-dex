@@ -2,7 +2,7 @@
   @for (pokemon of pokemonList.results; track pokemon) {
     <app-card
       [url]="pokemon.url"
-      [name]="pokemon.name"
+      [name]="pokemon.name.toUpperCase()"
     ></app-card>
   }
 </div>
