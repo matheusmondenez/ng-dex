@@ -1,9 +1,13 @@
-<div class="pokemon-card">
-  <div class="circle">
-    {{id}}
+@if (photo) {
+  <div class="pokemon-card">
+    <div class="circle">
+      {{id}}
+    </div>
+    <div class="content">
+      <img [src]="photo" [alt]="name">
+      <h2>{{name}}</h2>
+    </div>
   </div>
-  <div class="content">
-    <img [src]="photo" [alt]="name">
-    <h2>{{name}}</h2>
-  </div>
-</div>
+} @else {
+  <p>Loading...</p>
+}

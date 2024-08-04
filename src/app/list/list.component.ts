@@ -9,6 +9,11 @@ interface PokemonList {
   results?: any[]
 }
 
+type Pagination = {
+  offset: number
+  limit: number
+}
+
 @Component({
   selector: 'app-list',
   standalone: true,
@@ -20,6 +25,10 @@ interface PokemonList {
 export class ListComponent {
   pokemonService = inject(PokemonService)
   pokemonList: PokemonList = {}
+  pagination: Pagination = {
+    offset: 0,
+    limit: 20,
+  }
 
   constructor() {
     this.pokemonService.getAll().subscribe({
