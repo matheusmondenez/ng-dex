@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CardComponent } from '../card/card.component'
-import { PokemonService } from '../pokemon.service'
+import { PokemonService } from '../../services/pokemon.service'
 
 interface PokemonList {
   count?: number

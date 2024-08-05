@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Input } from '@angular/core'
-import { PokemonService } from '../pokemon.service'
+import { PokemonService } from '../../services/pokemon.service'
 
 @Component({
   selector: 'app-card',
@@ -9,11 +9,11 @@ import { PokemonService } from '../pokemon.service'
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
 })
-
 export class CardComponent {
   pokemonService = inject(PokemonService)
-  id: string = ''
-  photo: string = ''
+  id!: string
+  photo!: string
+  types!: string[]
 
   @Input({required: true}) url: string = '';
   @Input({required: true}) name: string = '';
