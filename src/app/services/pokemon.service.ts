@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Pagination } from '../../types/Pagination';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,8 @@ export class PokemonService {
     this.baseURL = 'https://pokeapi.co/api/v2'
   }
 
-  getAll() {
-    return this.http.get(`${this.baseURL}/pokemon?limit=151`)
+  getAll(pagination: Pagination) {
+    return this.http.get(`${this.baseURL}/pokemon?offset=${pagination.offset}?limit=${pagination.limit}`)
   }
 
   getById(id: string) {

@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { Input } from '@angular/core'
+import { Component, Input, Output, inject } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service'
 
 @Component({

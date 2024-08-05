@@ -1,17 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { CardComponent } from '../card/card.component'
 import { PokemonService } from '../../services/pokemon.service'
+import { Pagination } from '../../../types/Pagination'
 
 interface PokemonList {
   count?: number
   next?: string | null
   previous?: string | null
   results?: any[]
-}
-
-type Pagination = {
-  offset: number
-  limit: number
 }
 
 @Component({
@@ -31,7 +27,7 @@ export class ListComponent {
   }
 
   constructor() {
-    this.pokemonService.getAll().subscribe({
+    this.pokemonService.getAll(this.pagination).subscribe({
       next: (data: PokemonList) => {
         this.pokemonList = data
       },
