@@ -6,6 +6,11 @@
     <div class="content">
       <img [src]="photo" [alt]="name">
       <h2>{{name}}</h2>
+      <div class="types">
+        @for (type of types; track type) {
+          <span>{{type}}</span>
+        }
+      </div>
     </div>
   </div>
 } @else {

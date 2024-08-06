@@ -14,7 +14,7 @@ export class CardComponent implements OnInit, OnChanges {
   @Input({required: true}) name!: string
   id!: string
   photo!: string
-  types!: string[]
+  types: string[] = []
 
   constructor() {
     console.log('CardComponent constructor')
@@ -27,6 +27,7 @@ export class CardComponent implements OnInit, OnChanges {
       next: (data: any) => {
         this.id = data.id
         this.photo = data.sprites.other['official-artwork'].front_default
+        this.types.push(...data.types.map((type: any) => type.type.name))
       },
       error: (err) => {
         console.error(err)

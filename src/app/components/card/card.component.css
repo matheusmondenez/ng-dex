@@ -10,19 +10,11 @@
   overflow: hidden;
   box-shadow: 0 15px 25px rgba(0,0,0,0.2);
   transition: 0.5s;
+}
 
-  p {
-    font-family: "Roboto", sans-serif;
-  }
-
-  img {
-    max-height:100%;
-    max-width:100%;
-  }
-
-  h2 {
-    font-family: "Roboto", sans-serif;
-  }
+.pokemon-card img {
+  max-height:100%;
+  max-width:100%;
 }
 
 .pokemon-card-empty {
@@ -52,4 +44,8 @@
   padding: 20px;
   page-break-after: 20px;
   text-align: center;
+}
+
+.pokemon-card .content .types {
+  color: darkgray;
 }
