@@ -1,8 +1,8 @@
 <div class="pokemon-list">
-  @for (pokemon of pokemonList.results; track pokemon.name) {
+  @for (pokemon of pokemonList; track pokemon.name) {
     <app-card
       [url]="pokemon.url"
-      [name]="pokemon.name.toUpperCase()"
+      [name]="pokemon.name"
     >
     </app-card>
   }
