@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input, Output, inject, SimpleChanges } from '@angular/core'
+import { Component, OnInit, OnChanges, Input, Output, SimpleChanges, inject } from '@angular/core'
 import { PokemonService } from '../../services/pokemon.service'
 
 @Component({
@@ -36,6 +36,6 @@ export class CardComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('ListComponent ngOnChanges')
+    console.log('CardComponent ngOnChanges')
   }
 }

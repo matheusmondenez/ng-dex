@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChanges, inject } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges, inject } from '@angular/core'
 import { CardComponent } from '../card/card.component'
 import { PokemonService } from '../../services/pokemon.service'
 import { Pagination } from '../../../types/Pagination'
@@ -27,19 +27,26 @@ export class ListComponent implements OnInit, OnChanges {
     console.log('ListComponent ngOnInit')
     console.log('LIST:', this.pokemonList)
 
-    this.pokemonService.getAll(this.pagination).subscribe({
+    this.addOnList(this.pagination.offset)
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('ListComponent ngOnChanges')
+  }
+
+  loadMore() {
+    this.pagination.offset += 20
+    this.addOnList(this.pagination.offset)
+  }
+
+  addOnList(offset: number) {
+    this.pokemonService.getAll({offset, limit: this.pagination.limit}).subscribe({
       next: (data: any) => {
         this.pokemonList.push(...data.results)
-        this.pagination.offset = 20
-        this.pagination.limit = 20
       },
       error: (err) => {
         console.error(err)
       }
     })
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('ListComponent ngOnChanges')
   }
 }
