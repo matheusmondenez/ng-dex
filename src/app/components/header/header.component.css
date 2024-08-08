@@ -1,10 +1,22 @@
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background: lightslategray;
-}
-
-.header h1 {
+  padding: 10px;
   font-family: "Roboto", sans-serif;
   color: midnightblue;
+}
+
+.header .menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.header .filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
 }
