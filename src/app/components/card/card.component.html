@@ -1,14 +1,15 @@
 @if (photo) {
   <div class="pokemon-card">
     <div class="card-background">
-      <p>{{id}}</p>
+      <p>#{{id}}</p>
+      <p>star</p>
     </div>
     <div class="content">
       <img [src]="photo" [alt]="name">
-      <h2>{{name}}</h2>
+      <h2>{{name.charAt(0).toUpperCase() + name.slice(1)}}</h2>
       <div class="types">
         @for (type of types; track type) {
-          <span class="type-tag">{{type.toUpperCase()}}</span>
+          <span class="type-tag">{{type}}</span>
         }
       </div>
     </div>

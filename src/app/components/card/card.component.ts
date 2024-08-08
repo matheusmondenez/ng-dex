@@ -25,9 +25,9 @@ export class CardComponent implements OnInit, OnChanges {
 
     this.pokemonService.get(this.url).subscribe({
       next: (data: any) => {
-        this.id = data.id
+        this.id = data.id.toString().padStart(3, '0')
         this.photo = data.sprites.other['official-artwork'].front_default
-        this.types.push(...data.types.map((type: any) => type.type.name))
+        this.types.push(...data.types.map((type: any) => type.type.name.toUpperCase()))
       },
       error: (err) => {
         console.error(err)

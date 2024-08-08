@@ -31,7 +31,8 @@
 
 .pokemon-card .card-background {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
   width: 100%;
   height: 100%;
