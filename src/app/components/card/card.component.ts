@@ -27,7 +27,7 @@ export class CardComponent implements OnInit, OnChanges {
       next: (data: any) => {
         this.id = data.id.toString().padStart(3, '0')
         this.photo = data.sprites.other.home.front_default
-        this.types.push(...data.types.map((type: any) => type.type.name.toUpperCase()))
+        this.types.push(...data.types.map((type: any) => type.type.name))
       },
       error: (err) => {
         console.error(err)
