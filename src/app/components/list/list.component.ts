@@ -4,11 +4,12 @@ import { ButtonComponent } from '../button/button.component'
 import { PokemonService } from '../../services/pokemon.service'
 import { Pagination } from '../../../types/Pagination'
 import { List } from '../../../types/List'
+import { SkeletonComponent } from "../skeleton/skeleton.component";
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CardComponent, ButtonComponent],
+  imports: [CardComponent, ButtonComponent, SkeletonComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css',
 })

@@ -1,10 +1,11 @@
 import { Component, OnInit, OnChanges, Input, Output, SimpleChanges, inject } from '@angular/core'
 import { PokemonService } from '../../services/pokemon.service'
+import { SkeletonComponent } from "../skeleton/skeleton.component";
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [SkeletonComponent],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
 })
