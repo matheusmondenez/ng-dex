@@ -9,5 +9,15 @@ import { ButtonComponent } from '../button/button.component'
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  //
+  public label: string = 'Dark'
+
+  public toogleTheme() {
+    const dark = document.body.classList.toggle('dark')
+
+    if (dark) {
+      this.label = 'Light'
+    } else {
+      this.label = 'Dark'
+    }
+  }
 }
