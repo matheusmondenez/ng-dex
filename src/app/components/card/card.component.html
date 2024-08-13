@@ -5,8 +5,8 @@
         <p>#{{id}}</p>
         <p class="star">⭐</p>
       </div>
-      <div class="base-1"></div>
-      <div class="bottom-1"></div>
+      <div class="base-1 background-{{types[0]}}"></div>
+      <div class="bottom-1 background-{{types[0]}}"></div>
     </div>
     <div class="info">
       <div class="image">
@@ -14,7 +14,7 @@
       </div>
       <div class="name">
         @for (type of types; track type) {
-          <span class="span-1">{{type}}</span>
+          <span class="span-1 background-{{type}}">{{type}}</span>
         }
         <h2>{{name.charAt(0).toUpperCase() + name.slice(1)}}</h2>
       </div>

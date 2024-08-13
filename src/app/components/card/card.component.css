@@ -43,14 +43,14 @@
 }
 
 .base-1 {
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   width: 200px;
   height: 120px;
   border-radius: 10px 10px 0px 0px;
 }
 
 .bottom-1 {
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   height: 50px;
   width: 200px;
   transform-origin: right;
@@ -118,7 +118,7 @@
 }
 
 .container .span-1 {
-  background: green;
+  /* background: green; */
   padding: 0px 8px;
   margin-left: 10px;
   border-radius: 10px;
