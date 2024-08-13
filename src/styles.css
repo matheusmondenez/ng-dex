@@ -14,15 +14,25 @@
 }
 
 :root{
-	--surface: #f0f0f0;
+	--surface-light: #f0f0f0;
+	--surface-medium: #e2e2e2;
+	--surface-dark: #c2c2c2;
 }
 
 :root .dark{
-	--surface: #282828;
+	--surface-light: #4d4d4d;
+	--surface-medium: #282828;
+	--surface-dark: #212121;
 }
 
 body {
-	background: var(--surface);
+	padding: 0;
+	margin: 0;
+	background: var(--surface-medium);
+}
+
+header, footer {
+	background: var(--surface-dark);
 }
 
 .background-normal {
