@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   /* background: #212121; */
   padding: 10px;
   font-family: "Roboto", sans-serif;
@@ -10,13 +11,23 @@
 .header .logo {
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 5px;
 }
 
 .header .filters {
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 5px;
+}
+
+.header .filters input {
+  padding: 6px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.header .filters .icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
 }
