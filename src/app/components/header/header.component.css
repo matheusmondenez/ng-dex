@@ -13,6 +13,14 @@
   display: flex;
   flex-direction: row;
   gap: 5px;
+
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: white;
+    }
+  }
 }
 
 .header .filters {

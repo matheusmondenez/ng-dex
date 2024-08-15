@@ -9,6 +9,14 @@
   --card-width: 200px;
 }
 
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: transparent;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
