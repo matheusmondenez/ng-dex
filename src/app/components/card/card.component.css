@@ -12,8 +12,8 @@
 a {
   text-decoration: none;
 
-  &:visited {
-    color: transparent;
+  &:visited, &:hover, &:active {
+    color: inherit;
   }
 }
 
@@ -25,6 +25,7 @@ a {
   width: 200px;
   height: 280px;
   border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   z-index: 2;
 }
 

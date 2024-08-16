@@ -1,3 +1,4 @@
-.container {
-  /* background-color: #282828; */
+main {
+  width: 100%;
+  min-height: calc(100% - 260px);
 }
