@@ -4,5 +4,5 @@
 - [ ] Search
 - [ ] Filter
 - [ ] Shiny Encounter
-- [ ] Light/Dark Mode
+- [x] Light/Dark Mode
 - [ ] Detection
