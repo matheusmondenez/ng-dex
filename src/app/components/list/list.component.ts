@@ -19,6 +19,8 @@ export class ListComponent implements OnInit, OnChanges {
   pagination: Pagination = {
     offset: 0,
     limit: 20,
+    next: 21,
+    ended: false,
   }
 
   constructor() {
@@ -36,9 +38,26 @@ export class ListComponent implements OnInit, OnChanges {
     console.log('ListComponent ngOnChanges')
   }
 
+  // TODO: Corrigir o último passo da paginação
   loadMore() {
-    this.pagination.offset += 20
-    this.addOnList(this.pagination.offset)
+    alert(`Ended: ${this.pagination.ended}`)
+    alert(`Offset: ${this.pagination.offset}`)
+    alert(`Next: ${this.pagination.next}`)
+
+    if (!this.pagination.ended){
+      if (this.pagination.next + 20 <= 151) {
+        this.pagination.offset += 20
+        this.pagination.next += 20
+        this.addOnList(this.pagination.offset)
+      } else {
+        const remaining = (this.pagination.next + 20) - 151
+
+        alert(`Última: ${remaining}`)
+
+        this.addOnList(remaining)
+        this.pagination.ended = true
+      }
+    }
   }
 
   addOnList(offset: number) {

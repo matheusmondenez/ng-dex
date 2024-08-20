@@ -6,7 +6,9 @@
     >
     </app-card>
   }
-  <app-button (click)="loadMore()">
-    Mais
-  </app-button>
+  @if (!pagination.ended) {
+    <app-button (click)="loadMore()">
+      Mais
+    </app-button>
+  }
 </div>
