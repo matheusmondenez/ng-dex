@@ -19,11 +19,11 @@ export class CardComponent implements OnInit, OnChanges {
   types: string[] = []
 
   constructor() {
-    console.log('CardComponent constructor')
+    // console.log('CardComponent constructor')
   }
 
   ngOnInit(): void {
-    console.log('CardComponent ngOnInit')
+    // console.log('CardComponent ngOnInit')
 
     this.pokemonService.get(this.url).subscribe({
       next: (data: any) => {
@@ -38,6 +38,6 @@ export class CardComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('CardComponent ngOnChanges')
+    // console.log('CardComponent ngOnChanges')
   }
 }

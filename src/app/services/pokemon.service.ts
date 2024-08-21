@@ -17,7 +17,7 @@ export class PokemonService {
   }
 
   getAll(pagination: Pick<Pagination, 'offset' | 'limit'>) {
-    return this.http.get(`${this.baseURL}/pokemon?offset=${pagination.offset}?limit=${pagination.limit}`)
+    return this.http.get(`${this.baseURL}/pokemon?offset=${pagination.offset}&limit=${pagination.limit}`)
   }
 
   getById(id: string) {

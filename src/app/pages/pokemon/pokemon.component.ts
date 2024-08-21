@@ -10,6 +10,6 @@ import { Router } from '@angular/router'
 })
 export class PokemonComponent {
   constructor(public router: Router) {
-    console.log(router)
+    // console.log(router)
   }
 }

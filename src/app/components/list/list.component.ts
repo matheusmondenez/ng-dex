@@ -19,49 +19,44 @@ export class ListComponent implements OnInit, OnChanges {
   pagination: Pagination = {
     offset: 0,
     limit: 20,
-    next: 21,
+    next: 1,
     ended: false,
   }
 
   constructor() {
-    console.log('ListComponent constructor')
+    // console.log('ListComponent constructor')
   }
 
   ngOnInit(): void {
-    console.log('ListComponent ngOnInit')
-    console.log('LIST:', this.pokemonList)
+    // console.log('ListComponent ngOnInit')
+    // console.log('LIST:', this.pokemonList)
 
     this.addOnList(this.pagination.offset)
+    this.pagination.next += 20
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('ListComponent ngOnChanges')
+    // console.log('ListComponent ngOnChanges')
   }
 
-  // TODO: Corrigir o último passo da paginação
   loadMore() {
-    alert(`Ended: ${this.pagination.ended}`)
-    alert(`Offset: ${this.pagination.offset}`)
-    alert(`Next: ${this.pagination.next}`)
-
     if (!this.pagination.ended){
       if (this.pagination.next + 20 <= 151) {
         this.pagination.offset += 20
-        this.pagination.next += 20
         this.addOnList(this.pagination.offset)
+        this.pagination.next += 20
       } else {
-        const remaining = (this.pagination.next + 20) - 151
+        const remaining = (this.pagination.next + 20) - 150
 
-        alert(`Última: ${remaining}`)
-
-        this.addOnList(remaining)
+        this.pagination.offset += 20
+        this.addOnList(this.pagination.offset, remaining)
         this.pagination.ended = true
       }
     }
   }
 
-  addOnList(offset: number) {
-    this.pokemonService.getAll({offset, limit: this.pagination.limit}).subscribe({
+  addOnList(offset: number, limit: number = this.pagination.limit) {
+    this.pokemonService.getAll({offset, limit}).subscribe({
       next: (data: any) => {
         this.pokemonList.push(...data.results)
       },
