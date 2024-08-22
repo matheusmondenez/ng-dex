@@ -33,7 +33,7 @@ export class CardComponent implements OnInit, OnChanges {
       },
       error: (err) => {
         console.error(err)
-      }
+      },
     })
   }
 

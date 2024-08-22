@@ -20,7 +20,7 @@ export class PokemonService {
     return this.http.get(`${this.baseURL}/pokemon?offset=${pagination.offset}&limit=${pagination.limit}`)
   }
 
-  getById(id: string) {
-    return this.http.get(`${this.baseURL}/pokemon/${id}`)
+  getByIdOrName(idOrName: string) {
+    return this.http.get(`${this.baseURL}/pokemon/${idOrName}`)
   }
 }

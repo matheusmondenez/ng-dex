@@ -1,0 +1,16 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: Roboto, Helvetica, sans-serif;
+    background: lightblue;
+  }
+
+  img {
+    background: lightcoral;
+    width: 25%;
+  }
+}
