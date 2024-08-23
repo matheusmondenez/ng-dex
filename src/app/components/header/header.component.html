@@ -6,8 +6,8 @@
   </div>
   <nav>
     <div class="filters">
-      <input type="text" />
-      <app-button>
+      <input type="text" name="search" [value]="name" (keyup)="setSearch($event)" (keyup.enter)="alert('teste')"/>
+      <app-button (click)="getSearch()">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true" focusable="false" viewBox="0 0 512 512">
           <path
             fill="currentColor"
@@ -16,7 +16,7 @@
         </svg>
         Buscar
       </app-button>
-      <app-button>
+      <app-button (click)="filter()">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true" focusable="false" viewBox="0 0 512 512">
           <path
             fill="currentColor"
