@@ -2,7 +2,7 @@
   <h1>{{name.charAt(0).toUpperCase() + name.slice(1)}}</h1>
   <div class="content">
     <app-stats [stats]="stats"></app-stats>
-    <img [src]="photo" />
-    <app-moves></app-moves>
+    <div><img [src]="photo" /></div>
+    <app-moves [moves]="moves"></app-moves>
   </div>
 </section>

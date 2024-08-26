@@ -18,6 +18,7 @@ export class PokemonComponent implements OnInit {
   data: object = {}
   photo: string = ''
   stats?: Stats | any
+  moves?: string[] | any
 
   constructor(public router: Router) {
     this.name = router.url.substring(1)
@@ -29,6 +30,7 @@ export class PokemonComponent implements OnInit {
         this.data = data
         this.photo = data.sprites.other.home.front_default
         this.stats = data.stats.map((stat: any) => ({stat: stat.stat.name, value: stat.base_stat}))
+        this.moves = data.moves.map((move: any) => move.move.name)
       },
       error: (err) => {
         console.error(err)
