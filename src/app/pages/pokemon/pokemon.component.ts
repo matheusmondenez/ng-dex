@@ -1,11 +1,14 @@
 import { Component, OnInit, inject } from '@angular/core'
 import { Router } from '@angular/router'
 import { PokemonService } from '../../services/pokemon.service'
+import { StatsComponent } from '../../components/stats/stats.component'
+import { MovesComponent } from '../../components/moves/moves.component'
+import { Stats } from '../../../types/Stats'
 
 @Component({
   selector: 'app-pokemon',
   standalone: true,
-  imports: [],
+  imports: [StatsComponent, MovesComponent],
   templateUrl: './pokemon.component.html',
   styleUrl: './pokemon.component.css'
 })
@@ -14,6 +17,7 @@ export class PokemonComponent implements OnInit {
   name!: string
   data: object = {}
   photo: string = ''
+  stats?: Stats | any
 
   constructor(public router: Router) {
     this.name = router.url.substring(1)
@@ -24,6 +28,7 @@ export class PokemonComponent implements OnInit {
       next: (data: any) => {
         this.data = data
         this.photo = data.sprites.other.home.front_default
+        this.stats = data.stats.map((stat: any) => ({stat: stat.stat.name, value: stat.base_stat}))
       },
       error: (err) => {
         console.error(err)

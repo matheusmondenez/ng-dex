@@ -9,8 +9,13 @@ section {
     background: lightblue;
   }
 
-  img {
-    background: lightcoral;
-    width: 25%;
+  .content {
+    display: flex;
+    flex-direction: row;
+
+    img {
+      background: lightcoral;
+      /* width: 25%; */
+    }
   }
 }
