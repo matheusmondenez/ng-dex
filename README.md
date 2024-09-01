@@ -3,7 +3,7 @@
 A simple Pokédex made with Angular 17 and PokéAPI.
 
 ## Home Page
-- [x] 📋 List
+- [x] 📋 Paginated List
 - [ ] 🔍 Search
 - [ ] ⏳ Filter
 - [ ] ✨ Shiny Encounter
