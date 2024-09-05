@@ -12,5 +12,5 @@ A simple Pokédex made with Angular 17 and PokéAPI.
 
 ## Pokémon Page
 - [x] 🖼️ Images
-- [ ] 📊 Stats
+- [x] 📊 Stats
 - [ ] 🧬 Evolutions
