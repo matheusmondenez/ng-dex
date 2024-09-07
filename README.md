@@ -8,7 +8,6 @@ A simple Pokédex made with Angular 17 and PokéAPI.
 - [ ] ⏳ Filter
 - [ ] ✨ Shiny Encounter
 - [x] 🌗 Light/Dark Mode
-- [ ] 📸 Detection
 
 ## Pokémon Page
 - [x] 🖼️ Images
