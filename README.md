@@ -1,6 +1,6 @@
 # NgDex
 
-A simple Pokédex made with Angular 17 and PokéAPI.
+A simple Kanto Pokédex made with Angular 17 and PokéAPI.
 
 ---
 
